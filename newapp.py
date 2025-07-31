@@ -1,12 +1,23 @@
 from flask import Flask,request,jsonify,render_template
 app=Flask(__name__)
-keyword_responses={
- "hi":"hello there",
- "how are you":"i am fine",
- "what are you doing":"checking mails",
- "planning to meet":"yes sure"
+keyword_responses = {
+    "hi": "hello there",
+    "hello": "hey! how can I help you?",
+    "how are you": "I am fine, thank you!",
+    "what are you doing": "Just checking some mails",
+    "planning to meet": "Yes sure, let’s plan it!",
+    "what is your name": "I’m your friendly AI chatbot!",
+    "who created you": "I was created by a team of developers!",
+    "bye": "Goodbye! Have a great day!",
+    "thank you": "You're welcome!",
+    "what can you do": "I can chat with you, answer questions, and help you with tasks!",
+    "tell me a joke": "Why don’t scientists trust atoms? Because they make up everything!",
+    "what is ai": "AI stands for Artificial Intelligence. It's the simulation of human intelligence by machines.",
+    "open google": "Sorry, I can't open websites yet. 😅",
+    "weather today": "I don't have live weather data, but it’s always sunny in our chat!",
+    "your favorite color": "I like all the colors, but pink looks cute on me 💖"
+}
 
- }
 @app.route("/")
 def home():
     return render_template("index.html")
